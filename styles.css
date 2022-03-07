@@ -8,6 +8,11 @@
 
 body {
     font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #FCFAF9;
+    color: #191826;
+    background-image: url(/assets/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: 0px -200px; /*this sets the starting position of a background image - https://www.w3schools.com/cssref/pr_background-position.asp*/
 }
 
 a {
@@ -15,13 +20,366 @@ a {
     color: inherit;
 }
 
-img {
+img,
+svg {
     max-width: 100%;
     display: inline-block;
 }
 
-/* design */
-/* mobile - 375px */
-/* tablet - 768 */
-/* desktop - 1140 */
+/* General Layout */
+.site-wrap {
+    max-width: 90rem;
+    position: relative;
+}
 
+.container {
+    width: 87%;
+}
+
+.site-wrap,
+.container,
+.offer-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header Section */
+header {
+    margin: 2.499375rem 0 4rem;
+}
+
+/* Logo */
+.logo {
+    width: 9.130625rem;
+    height: 2rem;
+}
+
+/* Hero Section */
+.hero-title {
+    font-size: 2.5rem;
+    line-height: 48px;
+    letter-spacing: -0.45px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title,
+.offer-title,
+.stand-out,
+.btn,
+.accent {
+    font-weight: 700;
+}
+
+.hero-paragraph {
+    line-height: 26px;
+}
+
+/* Offer Section */
+.offer {
+    background-color: #191826;
+    background-image: url(/assets/bg-pattern-2.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 17.5rem; /*the one-value syntax (sets the width of the image (height becomes "auto")*/
+    margin-top: 11rem;
+    padding-top: 0.01rem; /*in order to work .offer-image margin-top: -6.125rem*/
+    position: relative;
+}
+
+.offer-image {
+    width: 13.0625rem;
+    height: 26.875rem;
+    display: block;
+    margin: -6.125rem auto 3rem;
+}
+
+.offer,
+.offer-content,
+.btn {
+    border-radius: 12px;
+}
+
+.offer-content {
+    max-width: 24.9375rem;
+    background-color: #FA7453;
+    color: #FCFAF9;
+    padding: 3rem 2.3125rem;
+}
+
+.offer-title {
+    font-size: 2rem;
+    line-height: 40px;
+    margin-bottom: .75rem;
+}
+
+.offer-paragraph {
+    font-size: 1.125rem;
+    line-height: 28px;
+}
+
+.price {
+    font-size: 1.25rem;
+    line-height: 32px;
+    margin: 2.25rem 0 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.stand-out {
+    font-size: 4.0625rem;
+    line-height: 52px;
+    margin-right: 1rem;
+}
+
+/* Buttons */
+.btn {
+    font-size: 1.125rem;
+    line-height: 32px;
+    letter-spacing: -0.18px;
+    padding: 1rem 2rem;
+    color: inherit;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .3s ease-in-out;
+}
+
+.btn-dark {
+    background-color: #191826;
+    margin-bottom: 1rem;
+}
+
+.btn-light {
+    background-color: #FCFAF9;
+    color: #191826;
+}
+
+.svg-icon {
+    margin-right: 0.5rem;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+    background-color: #66E2DC;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    background-color: #FFB964;
+}
+
+/* Footer section */
+footer {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0 5rem;
+}
+
+.footer-text {
+    margin-top: 2.25rem;
+}
+
+.footer-text-paragraph {
+    line-height: 26px; /*de transformat la final in 1.2, 1.3 din astea..valori*/
+}
+
+.footer-links {
+    margin-top: 4rem;
+}
+
+.a-link-wrapper + .a-link-wrapper {
+    margin-left: 1.25rem;
+}
+
+.svg-link {
+    fill: currentColor;
+}
+
+.a-link-wrapper {transition: .3s ease-in-out}
+
+.a-link-wrapper:hover,
+.a-link-wrapper:focus {
+    color:#FA7453;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    body {
+        background-image: url(/assets/bg-main-tablet.png);
+        background-position: -380px -300px;
+    }
+
+    .site-wrap::before {
+        content: "";
+        background-image: url(/assets/bg-pattern-1.svg);
+        background-size: 16.666875rem;
+        width: 16.666875rem;
+        height: 25rem;
+        position: absolute;
+        top: -95px;
+        right: -30px;
+    }
+
+    header {
+        margin: 3.874375rem 0 5.938125rem;
+    }
+
+    .hero-title,
+    .hero-paragraph {max-width: 520px;}
+
+    .hero-title {
+        font-size: 4rem;
+        line-height: 64px;
+        letter-spacing: -0.7px;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-paragraph {
+        font-size: 1.125rem;
+        line-height: 28px;
+    }
+
+    .offer {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15rem;
+        padding-bottom: 0.1px;
+        background-position: 55% -20%;
+    }
+    
+    .offer-image {
+        width: 16.888125rem;
+        height: 34.75rem;
+        margin-top: -8.625rem;
+        margin-left: 4rem;
+        margin-bottom: 11.375rem;
+    }
+
+    .offer-content {
+        padding: 3rem;
+        position: absolute;
+        top: 9.375rem;
+        right: 3.625rem;
+    }
+
+    footer {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 11.4375rem 0 5.3125rem;
+    }
+
+    .footer-content {
+        width: 60%;
+    }
+
+    .footer-text {
+        max-width: 366px;
+    }
+
+    .footer-links {
+        width: 35%;
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Desktop */
+@media (min-width:1245px) {
+   .container {
+       max-width: 1110px;
+   }
+
+   body {
+    background-image: url(/assets/bg-main-desktop.png);
+    background-position: 50% -16rem;
+    }
+
+    .site-wrap::before {
+        background-size: 19.5rem;
+        width: 19.5rem;
+        height: 29.25rem;
+        top: -95px;
+        right: 5px;
+        background-repeat: no-repeat;
+    }
+
+   header {
+       margin-bottom: 11.125625rem;
+   }
+
+    .hero-title {
+        font-size: 5.5rem;
+        line-height: 88px;
+        letter-spacing: -1px;
+        max-width: 1015px;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-paragraph {
+        font-size: 1.25rem;
+        line-height: 34px;
+        max-width: 825px;
+    }
+
+    .offer {
+        margin-top: 20.0625rem;
+        background-size: 19.5rem;
+        max-width: 1110px;
+        background-position: 42% -30%;
+    }
+
+    .offer-image {
+        width: 19.5rem;
+        height: 40.125rem;
+        margin-top: -13.3125rem;
+        margin-left: 6.375rem;
+        margin-bottom: 10.6875rem;
+    }
+
+    .offer-content {
+        max-width: 27.875rem;
+        padding: 3.5rem;
+        right: 5.9375rem;
+        top: 5.625rem;
+    }
+
+    .offer-title {
+        font-size: 2.5rem;
+        line-height: 52px;
+        margin-bottom: 1.375rem;
+    }
+
+    .offer-paragraph {
+        font-size: 1.25rem;
+        line-height: 34px;
+    }
+
+    .price {
+        margin: 2.4375rem 0 2.875rem;
+    }
+
+    footer {
+        margin: 12.625rem 0 5.6875rem;
+    }
+    
+    .footer-content {
+        display: flex;
+        width: 65%;
+    }
+
+    .footer-content img {
+        margin-right: 8.61rem;
+    }
+
+    .footer-text {
+        margin-top: 0;
+    }
+}
