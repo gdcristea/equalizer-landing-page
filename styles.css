@@ -77,7 +77,7 @@ header {
 /* Offer Section */
 .offer {
     background-color: #191826;
-    background-image: url(/assets/bg-pattern-2.svg);
+    background-image: url(assets/bg-pattern-2.svg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 17.5rem; /*the one-value syntax (sets the width of the image (height becomes "auto")*/
@@ -210,13 +210,13 @@ footer {
     }
     
     body {
-        background-image: url(/assets/bg-main-tablet.png);
+        background-image: url(assets/bg-main-tablet.png);
         background-position: -380px -300px;
     }
 
     .site-wrap::before {
         content: "";
-        background-image: url(/assets/bg-pattern-1.svg);
+        background-image: url(assets/bg-pattern-1.svg);
         background-size: 16.666875rem;
         width: 16.666875rem;
         height: 25rem;
@@ -298,7 +298,7 @@ footer {
    }
 
    body {
-    background-image: url(/assets/bg-main-desktop.png);
+    background-image: url(assets/bg-main-desktop.png);
     background-position: 50% -16rem;
     }
 
