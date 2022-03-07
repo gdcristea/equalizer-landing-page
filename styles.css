@@ -10,7 +10,7 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
     background-color: #FCFAF9;
     color: #191826;
-    background-image: url(/assets/bg-main-mobile.png);
+    background-image: url(assets/bg-main-mobile.png);
     background-repeat: no-repeat;
     background-position: 0px -200px; /*this sets the starting position of a background image - https://www.w3schools.com/cssref/pr_background-position.asp*/
 }
